@@ -10,58 +10,70 @@ import java.util.Map;
 
 public class Team {
 
-	private Candidate salesCandidate;
-	private Candidate marketingCandidate;
-	private List<Candidate> engineerCandidate;
-	private int isAnyCandidateGraterThan35;
-	private String location;
+    private Candidate salesCandidate;
+    private Candidate marketingCandidate;
+    private List<Candidate> engineerCandidate;
+    private int counterAgeGraterThan35;
+    private String location;
 
-	public Candidate getSalesCandidate() {
-		return salesCandidate;
-	}
+    public Team() {
+        engineerCandidate = new ArrayList<Candidate>();
+    }
 
-	public void setSalesCandidate(Candidate salesCandidate) {
-		this.salesCandidate = salesCandidate;
-	}
+    public int getCounterAgeGraterThan35() {
+        return counterAgeGraterThan35;
+    }
 
-	public Candidate getMarketingCandidate() {
-		return marketingCandidate;
-	}
+    public void setCounterAgeGraterThan35(int counterAgeGraterThan35) {
+        this.counterAgeGraterThan35 = counterAgeGraterThan35;
+    }
 
-	public void setMarketingCandidate(Candidate marketingCandidate) {
-		this.marketingCandidate = marketingCandidate;
-	}
+    public void increaseCounterAgeGraterThan35() {
+        this.counterAgeGraterThan35 += 1;
+    }
 
-	public List<Candidate> getEngineerCandidate() {
-		return engineerCandidate;
-	}
+    public void decreaseCounterAgeGraterThan35() {
+        this.counterAgeGraterThan35 -= 1;
+    }
 
-	public void setEngineerCandidate(List<Candidate> engineerCandidate) {
-		this.engineerCandidate = engineerCandidate;
-	}
+    public Candidate getSalesCandidate() {
+        return salesCandidate;
+    }
 
-	public int getIsAnyCandidateGraterThan35() {
-		return isAnyCandidateGraterThan35;
-	}
+    public void setSalesCandidate(Candidate salesCandidate) {
+        this.salesCandidate = salesCandidate;
+    }
 
-	public void setIsAnyCandidateGraterThan35(int isAnyCandidateGraterThan35) {
-		this.isAnyCandidateGraterThan35 = isAnyCandidateGraterThan35;
-	}
+    public Candidate getMarketingCandidate() {
+        return marketingCandidate;
+    }
 
-	public String getLocation() {
-		return location;
-	}
+    public void setMarketingCandidate(Candidate marketingCandidate) {
+        this.marketingCandidate = marketingCandidate;
+    }
 
-	public void setLocation(String location) {
-		this.location = location;
-	}
+    public List<Candidate> getEngineerCandidate() {
+        return engineerCandidate;
+    }
 
-	@Override
-	public String toString() {
-		return "Team{" +
-				"salesCandidate=" + salesCandidate +
-				", marketingCandidate=" + marketingCandidate +
-				", engineerCandidate=" + engineerCandidate +
-				'}';
-	}
+    public void setEngineerCandidate(List<Candidate> engineerCandidate) {
+        this.engineerCandidate = engineerCandidate;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    @Override
+    public String toString() {
+        return "Team{" +
+                "salesCandidate=" + salesCandidate +
+                ", marketingCandidate=" + marketingCandidate +
+                ", engineerCandidate=" + engineerCandidate +
+                '}';
+    }
 }

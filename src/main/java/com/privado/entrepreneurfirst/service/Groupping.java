@@ -6,5 +6,5 @@ import com.privado.entrepreneurfirst.model.ResultGroups;
 import java.util.List;
 
 public interface Groupping {
-    public ResultGroups createGroups(List<Candidate> candidates);
+    public ResultGroups createAndSave(List<Candidate> candidates);
 }
